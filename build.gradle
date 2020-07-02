@@ -44,7 +44,7 @@ ext {
   espresso_version = "3.2.0"
 
   // App dependencies
-  navigation_version = "2.2.2"
+  navigation_version = "2.3.0"
   rx_java_version = "2.2.19"
   rx_android_version = "2.1.1"
   dagger_version = "2.28"
