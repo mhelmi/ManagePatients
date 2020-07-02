@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:layout_margin="@dimen/_10sdp"
+  android:orientation="vertical"
+  tools:context=".features.settings.ui.SettingsFragment">
+
+  <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginStart="@dimen/_5sdp"
+    android:layout_marginEnd="@dimen/_5sdp"
+    android:text="@string/menu_settings"
+    android:textColor="@color/colorAccent"
+    android:textSize="@dimen/_15sdp" />
+
+  <com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/tilUsername"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_10sdp"
+
+    android:hint="@string/current_username">
+
+    <com.google.android.material.textfield.TextInputEditText
+      android:id="@+id/etUsername"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" />
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/tilCurrentPatientCount"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:hint="@string/current_number_of_added_patients">
+
+    <com.google.android.material.textfield.TextInputEditText
+      android:id="@+id/etCurrentPatientCount"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:enabled="false"
+      android:focusable="false"
+      android:inputType="number" />
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/tilMaxNumberOfPatients"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:hint="@string/max_number_of_patients_allowed">
+
+    <com.google.android.material.textfield.TextInputEditText
+      android:id="@+id/etMaxNumberOfPatients"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:inputType="number" />
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <androidx.appcompat.widget.AppCompatButton
+    android:id="@+id/btnSave"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:paddingStart="@dimen/_20sdp"
+    android:paddingEnd="@dimen/_20sdp"
+    android:text="@string/save"
+    android:textColor="@android:color/white"
+    app:backgroundTint="@color/colorAccent" />
+
+</LinearLayout>

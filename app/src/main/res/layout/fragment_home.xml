@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".features.home.ui.fragments.HomeFragment">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/_10sdp"
+    android:orientation="vertical">
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:layout_marginStart="@dimen/_5sdp"
+      android:layout_marginEnd="@dimen/_5sdp"
+      android:text="@string/add_new_patient"
+      android:textColor="@color/colorAccent"
+      android:textSize="@dimen/_15sdp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/tilFullName"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/_10sdp"
+      android:hint="@string/full_name">
+
+      <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etFullName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/_10sdp"
+      android:gravity="center"
+      android:orientation="horizontal">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:text="@string/gender"
+        android:textSize="@dimen/_14sdp" />
+
+      <RadioGroup
+        android:id="@+id/radioGroupGender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+          android:id="@+id/radioMale"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="@dimen/_5sdp"
+          android:text="@string/male" />
+
+        <RadioButton
+          android:id="@+id/radioFemale"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/female" />
+
+        <RadioButton
+          android:id="@+id/radioOther"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/_5sdp"
+          android:layout_marginEnd="@dimen/_5sdp"
+          android:text="@string/other" />
+      </RadioGroup>
+    </LinearLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/tilAge"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/_10sdp"
+      android:hint="@string/age">
+
+      <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/tilEmail"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/_10sdp"
+      android:hint="@string/email">
+
+      <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/rvPatients"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_marginTop="@dimen/_10sdp"
+      tools:itemCount="10"
+      tools:listitem="@layout/item_patient" />
+
+
+  </LinearLayout>
+
+  <com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:id="@+id/fabAddPatient"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom|end"
+    android:layout_margin="@dimen/fab_margin"
+    app:srcCompat="@drawable/ic_add_white_24dp" />
+
+</FrameLayout>
