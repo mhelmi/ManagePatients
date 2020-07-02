@@ -1,8 +1,6 @@
 package com.bugevil.mhelmi.managepatients.utils;
 
 import android.content.SharedPreferences;
-import com.bugevil.mhelmi.managepatients.features.settings.data.models.User;
-import com.google.gson.Gson;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
